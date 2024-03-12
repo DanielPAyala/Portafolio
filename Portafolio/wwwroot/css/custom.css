@@ -19,8 +19,18 @@
     font-size: 1.25rem;
 }
 
+.logos {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .img-dotnet {
-    width: 500px;
+    width: 150px;
+}
+
+.img-angular {
+    width: 188px;
 }
 
 .cabecera {
