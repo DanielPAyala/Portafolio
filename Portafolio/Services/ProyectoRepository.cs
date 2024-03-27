@@ -24,7 +24,7 @@ namespace Portafolio.Services
                 {
                     Titulo = "Portafolio",
                     Descripcion = "Landing Page",
-                    Link = "https://store.steampowered.com",
+                    Link = "https://portafoliocarlosporras.azurewebsites.net/",
                     ImagenURL = "/img/projects/portafolio.png",
                     Repo = "https://github.com/DanielPAyala/Portafolio"
                 },
