@@ -1,13 +1,22 @@
-﻿@model IEnumerable<ProyectoDTO>
+﻿@model IGrouping<string, ProyectoDTO>
+
+@{
+    var tipo = Model.ToList().GroupBy(a => a.TipoProyectoDto.Id);
+}
 
 @if(Model is not null) {
-    <div class="container">
+    <div class="container mt-5">
+        @foreach (var item in tipo)
+        {
+            <h2 class="text-center bg-@item.Key mb-3 py-3 text-white">@Model.Key</h2>
+        }
+
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            @foreach (var proyecto in Model)
+            @foreach (var proyecto in Model.ToList())
             {
                 <div class="col">
                     <div class="card h-100">
-                        <img src="@proyecto.ImagenURL" class="card-img-top" alt="imagen proyecto" />
+                        <img src="@proyecto.ImagenURL" class="card-img-top" alt="imagen proyecto"/>
                         <div class="card-body">
                             <h5 class="card-title">@proyecto.Titulo</h5>
                             <p class="card-text">@proyecto.Descripcion</p>

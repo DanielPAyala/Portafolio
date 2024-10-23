@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProyectoDTO>
+﻿@model IEnumerable<IGrouping<string, ProyectoDTO>>
 @{
     ViewData["Title"] = "Proyectos";
 }
@@ -8,4 +8,8 @@
     <p>Aquí encontrarás algunos de los proyectos en los que he trabajado.</p>
 </div>
 
-<partial name="_ListadoProyectos" model="Model" />
+@foreach (var grupo in Model)
+{
+    <partial name="_ListadoProyectos" model="grupo" />
+    
+}

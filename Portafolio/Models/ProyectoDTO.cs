@@ -7,5 +7,6 @@
         public string ImagenURL { get; set; }
         public string Link { get; set; }
         public string Repo { get; set; }
+        public TipoProyectoDTO TipoProyectoDto { get; set; }
     }
 }

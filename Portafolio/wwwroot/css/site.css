@@ -16,3 +16,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.bg-1 {
+    background-color: #de002d;
+}
+
+.bg-2 {
+    background-color: #a377dc;
+}
+
+.bg-3 {
+    background-color: #00daff;
+}

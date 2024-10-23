@@ -29,7 +29,8 @@ namespace Portafolio.Controllers
         public IActionResult Proyectos()
         {   
             var proyectos = _proyectoRepository.ObtenerProyectos();
-            return View(proyectos);
+            var proyectosAgrupados = proyectos.GroupBy(p => p.TipoProyectoDto.Nombre);
+            return View(proyectosAgrupados);
         }
 
         public IActionResult Contacto()
